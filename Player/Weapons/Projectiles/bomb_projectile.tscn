@@ -1,25 +1,25 @@
-[gd_scene format=3 uid="uid://dae46gtuo7067"]
+[gd_scene format=3 uid="uid://ud8svnbe7gsh"]
 
-[ext_resource type="Texture2D" uid="uid://dwp84ia6mgw87" path="res://assets/laserPink3.png" id="2_7csma"]
-[ext_resource type="Script" uid="uid://df8lem5ywwfqx" path="res://Player/Weapons/Projectiles/bomb.gd" id="2_ryitc"]
-[ext_resource type="Texture2D" uid="uid://cdb41se7b61ef" path="res://assets/laserPink_burst.png" id="3_7csma"]
+[ext_resource type="Script" uid="uid://df8lem5ywwfqx" path="res://Player/Weapons/Projectiles/bomb.gd" id="1_oj23l"]
+[ext_resource type="Texture2D" path="res://laserPink3.png" id="2_qibx6"]
+[ext_resource type="Texture2D" path="res://laserPink_burst.png" id="3_71ksk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7csma"]
 radius = 115.10864
 
 [node name="Bomb" type="Area2D" unique_id=58300513]
-script = ExtResource("2_ryitc")
+script = ExtResource("1_oj23l")
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1972361601]
 shape = SubResource("CircleShape2D_7csma")
 
 [node name="BombSprite" type="Sprite2D" parent="." unique_id=311658258]
 scale = Vector2(0.4032258, 1)
-texture = ExtResource("2_7csma")
+texture = ExtResource("2_qibx6")
 
 [node name="ExplosionSprite" type="Sprite2D" parent="." unique_id=1836373823]
 scale = Vector2(1.3670213, 1.3670213)
-texture = ExtResource("3_7csma")
+texture = ExtResource("3_71ksk")
 
 [node name="Lifespan" type="Timer" parent="." unique_id=2090645208]
 wait_time = 0.5
