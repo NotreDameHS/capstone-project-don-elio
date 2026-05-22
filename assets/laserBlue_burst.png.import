@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pf7wk816jr35"
-path="res://.godot/imported/laserGreen_burst.png-d0fb5523c1f9933002f2979ed8c1c6e6.ctex"
+uid="uid://do6aecghub3xp"
+path="res://.godot/imported/laserBlue_burst.png-5ce4ca0172f7d70e897c2610aba17de3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/kenney_alien-ufo-pack/PNG/laserGreen_burst.png"
-dest_files=["res://.godot/imported/laserGreen_burst.png-d0fb5523c1f9933002f2979ed8c1c6e6.ctex"]
+source_file="res://assets/laserBlue_burst.png"
+dest_files=["res://.godot/imported/laserBlue_burst.png-5ce4ca0172f7d70e897c2610aba17de3.ctex"]
 
 [params]
 

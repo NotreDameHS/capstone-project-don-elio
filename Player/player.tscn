@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rn5xs2eqd666"]
 
 [ext_resource type="Script" uid="uid://d1ckm5tcn4quc" path="res://Player/player.gd" id="1_l8h54"]
-[ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://Assets/kenney_alien-ufo-pack/PNG/shipBeige_manned.png" id="2_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://assets/shipBeige_manned.png" id="2_4ntmi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_btcbx"]
 radius = 49.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0s55v38y20tc"
-path="res://.godot/imported/laserGreen1.png-9136dc12911a7dc9f55786e38964d0bc.ctex"
+uid="uid://cc2wdv6u3m5gi"
+path="res://.godot/imported/laserGreen3.png-f5e4229602ebd6bd3c74788f276d73aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/kenney_alien-ufo-pack/PNG/laserGreen1.png"
-dest_files=["res://.godot/imported/laserGreen1.png-9136dc12911a7dc9f55786e38964d0bc.ctex"]
+source_file="res://assets/laserGreen3.png"
+dest_files=["res://.godot/imported/laserGreen3.png-f5e4229602ebd6bd3c74788f276d73aa.ctex"]
 
 [params]
 

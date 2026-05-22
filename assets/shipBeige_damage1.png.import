@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://daylo31aipvls"
-path="res://.godot/imported/laserBlue1.png-8f01d374da43c186642e1fb26bc58543.ctex"
+uid="uid://ddutmckm2xumi"
+path="res://.godot/imported/shipBeige_damage1.png-ccc065593fa85c6d0a88568e6c05adf6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/kenney_alien-ufo-pack/PNG/laserBlue1.png"
-dest_files=["res://.godot/imported/laserBlue1.png-8f01d374da43c186642e1fb26bc58543.ctex"]
+source_file="res://assets/shipBeige_damage1.png"
+dest_files=["res://.godot/imported/shipBeige_damage1.png-ccc065593fa85c6d0a88568e6c05adf6.ctex"]
 
 [params]
 

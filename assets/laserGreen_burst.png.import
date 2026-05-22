@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu3wyc1j50jw1"
-path="res://.godot/imported/redslash.png-bafc96e14f6f2c2dac067c71c9ad3a43.ctex"
+uid="uid://pf7wk816jr35"
+path="res://.godot/imported/laserGreen_burst.png-5bff0ad1e22b03eaf034e6545e822256.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/redslash.png"
-dest_files=["res://.godot/imported/redslash.png-bafc96e14f6f2c2dac067c71c9ad3a43.ctex"]
+source_file="res://assets/laserGreen_burst.png"
+dest_files=["res://.godot/imported/laserGreen_burst.png-5bff0ad1e22b03eaf034e6545e822256.ctex"]
 
 [params]
 

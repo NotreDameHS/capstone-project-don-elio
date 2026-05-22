@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dae46gtuo7067"]
 
-[ext_resource type="Texture2D" uid="uid://dwp84ia6mgw87" path="res://Assets/kenney_alien-ufo-pack/PNG/laserPink3.png" id="2_7csma"]
+[ext_resource type="Texture2D" uid="uid://dwp84ia6mgw87" path="res://assets/laserPink3.png" id="2_7csma"]
 [ext_resource type="Script" uid="uid://df8lem5ywwfqx" path="res://Player/Weapons/Projectiles/bomb.gd" id="2_ryitc"]
-[ext_resource type="Texture2D" uid="uid://cdb41se7b61ef" path="res://Assets/kenney_alien-ufo-pack/PNG/laserPink_burst.png" id="3_7csma"]
+[ext_resource type="Texture2D" uid="uid://cdb41se7b61ef" path="res://assets/laserPink_burst.png" id="3_7csma"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7csma"]
 radius = 115.10864

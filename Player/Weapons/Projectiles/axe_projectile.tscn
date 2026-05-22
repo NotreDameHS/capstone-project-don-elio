@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0ckwlb8bkt7e"]
 
 [ext_resource type="PackedScene" uid="uid://dqk3u2gbekgig" path="res://Player/Weapons/Projectiles/projectile.tscn" id="1_jwup7"]
-[ext_resource type="Texture2D" uid="uid://cu3wyc1j50jw1" path="res://Assets/redslash.png" id="2_cby87"]
+[ext_resource type="Texture2D" uid="uid://cu3wyc1j50jw1" path="res://assets/redslash.png" id="2_cby87"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x6xev"]
 radius = 124.0
