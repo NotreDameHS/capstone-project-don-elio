@@ -19,7 +19,7 @@ texture = ExtResource("2_oj23l")
 
 [node name="ExplosionSprite" type="Sprite2D" parent="." unique_id=1836373823]
 visible = false
-scale = Vector2(1.3670213, 1.3670213)
+scale = Vector2(3, 3)
 texture = ExtResource("3_qibx6")
 
 [node name="Lifespan" type="Timer" parent="." unique_id=2090645208]

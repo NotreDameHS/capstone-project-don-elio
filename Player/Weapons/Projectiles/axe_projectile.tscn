@@ -8,7 +8,7 @@ radius = 124.0
 height = 614.0
 
 [node name="Axe Projectile" unique_id=142943135 instance=ExtResource("1_jwup7")]
-lifespan = 0.5
+lifespan = 0.1
 projectile_speed = 0
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=1360138503]

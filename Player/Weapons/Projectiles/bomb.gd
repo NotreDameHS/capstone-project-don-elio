@@ -6,7 +6,7 @@ class_name Projectile
 @onready var bomb_sprite := $BombSprite
 @onready var explosion_sprite := $ExplosionSprite
 @onready var hitbox := $Hitbox
-@export var hitbox_size := 100
+@export var hitbox_size := 300
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	lifetimer.wait_time = lifespan
