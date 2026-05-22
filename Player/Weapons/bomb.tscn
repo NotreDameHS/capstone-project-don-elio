@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cn0dua1isisqv"]
+
+[ext_resource type="PackedScene" uid="uid://be0r1opel7ue" path="res://Player/Weapons/weapon.tscn" id="1_hhuee"]
+[ext_resource type="PackedScene" uid="uid://ud8svnbe7gsh" path="res://Player/Weapons/Projectiles/bomb_projectile.tscn" id="2_6fx2k"]
+
+[node name="Bomb" unique_id=1605596866 instance=ExtResource("1_hhuee")]
+damage = 70
+attack_speed = 0.5
+projectile_scene = ExtResource("2_6fx2k")
+projectiles_num = 4

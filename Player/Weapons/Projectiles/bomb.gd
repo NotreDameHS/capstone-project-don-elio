@@ -26,6 +26,8 @@ func _on_lifespan_timeout() -> void:
 	explosion_sprite.visible = true
 	get_tree().current_scene.add_child(hitbox)
 	hitbox.shape.radius = hitbox_size
-
+	await get_tree().create_timer(0.1).timeout
+	queue_free()
+	
 func _on_area_entered(area: Area2D) -> void:
 	pass #
