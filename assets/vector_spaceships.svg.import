@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4m7vslyy0cfq"
-path="res://.godot/imported/vector_spaceships.svg-efe05156c67d7727e17342006c1fe886.ctex"
+path="res://.godot/imported/vector_spaceships.svg-9df67e00eb0e5f4bfb4f6dd1ba13ebb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vector_spaceships.svg"
-dest_files=["res://.godot/imported/vector_spaceships.svg-efe05156c67d7727e17342006c1fe886.ctex"]
+source_file="res://assets/vector_spaceships.svg"
+dest_files=["res://.godot/imported/vector_spaceships.svg-9df67e00eb0e5f4bfb4f6dd1ba13ebb3.ctex"]
 
 [params]
 
