@@ -7,4 +7,4 @@
 damage = 70
 attack_speed = 0.5
 projectile_scene = ExtResource("2_6fx2k")
-projectiles_num = 4
+projectiles_num = 2
