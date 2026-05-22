@@ -31,11 +31,11 @@ step = 1.0
 value = 50.0
 show_percentage = false
 
-[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=152329304]
+[node name="Timer" type="Panel" parent="MarginContainer/HBoxContainer" unique_id=152329304]
 layout_mode = 2
 tooltip_text = "Timer"
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel" unique_id=2101663288]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Timer" unique_id=2101663288]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 9.0
@@ -43,14 +43,14 @@ offset_right = 47.0
 offset_bottom = 32.0
 text = "Timer"
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/Panel" unique_id=727128101]
+[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/Timer" unique_id=727128101]
 layout_mode = 0
 offset_left = 1026.0
 offset_top = 24.0
 offset_right = 1070.0
 offset_bottom = 62.0
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Panel/Button" unique_id=1367068981]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Timer/Quit" unique_id=1367068981]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 7.0
@@ -58,4 +58,4 @@ offset_right = 45.0
 offset_bottom = 30.0
 text = "Quit"
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Timer/Quit" to="." method="_on_button_pressed"]
