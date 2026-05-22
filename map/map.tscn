@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bptwh0vxtkvm" path="res://assets/background.png" id="1_hgrid"]
 [ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://cn0dua1isisqv" path="res://Player/Weapons/bomb.tscn" id="3_kffv2"]
-[ext_resource type="PackedScene" uid="uid://b4ysbstrrmuiq" path="res://Mobs/mob.tscn" id="4_7lyie"]
 [ext_resource type="PackedScene" uid="uid://co48w0mi0avur" path="res://Player/Weapons/axe.tscn" id="4_kffv2"]
+[ext_resource type="PackedScene" uid="uid://pnr34cqadsqd" path="res://Mobs/basic_mob.tscn" id="5_kffv2"]
 
 [node name="Map" type="Node2D" unique_id=1840484172]
 
@@ -19,4 +19,4 @@ texture = ExtResource("1_hgrid")
 
 [node name="Axe" parent="Player" unique_id=1634916553 instance=ExtResource("4_kffv2")]
 
-[node name="Mob" parent="." unique_id=1979868123 instance=ExtResource("4_7lyie")]
+[node name="Basic Mob" parent="." unique_id=1979868123 instance=ExtResource("5_kffv2")]
