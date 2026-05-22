@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://0ckwlb8bkt7e"]
+
+[ext_resource type="PackedScene" uid="uid://dqk3u2gbekgig" path="res://Player/Weapons/Projectiles/projectile.tscn" id="1_jwup7"]
+[ext_resource type="Texture2D" uid="uid://cu3wyc1j50jw1" path="res://Assets/redslash.png" id="2_cby87"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x6xev"]
+radius = 124.0
+height = 614.0
+
+[node name="Axe Projectile" unique_id=142943135 instance=ExtResource("1_jwup7")]
+lifespan = 0.5
+projectile_speed = 0
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1360138503]
+position = Vector2(100, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_x6xev")
+
+[node name="Sprite2D" parent="." index="1" unique_id=2053560303]
+position = Vector2(100, 0)
+scale = Vector2(0.93652344, 0.6041666)
+texture = ExtResource("2_cby87")
+flip_h = true

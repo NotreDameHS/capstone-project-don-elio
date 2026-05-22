@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dudyr8q0b4642"]
+
+[ext_resource type="Script" uid="uid://tqwcirl12c0q" path="res://Test/test.gd" id="1_jda1s"]
+[ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="1_yfa23"]
+[ext_resource type="Script" uid="uid://bw4ypwau1c8s" path="res://Test/label.gd" id="2_lxp54"]
+
+[node name="Test" type="Node2D" unique_id=1035909274]
+script = ExtResource("1_jda1s")
+
+[node name="Player" parent="." unique_id=2093391887 instance=ExtResource("1_yfa23")]
+position = Vector2(391, 174)
+
+[node name="Interface" type="Control" parent="." unique_id=474176932]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Interface" unique_id=748359205]
+layout_mode = 0
+offset_right = 207.0
+offset_bottom = 72.0
+script = ExtResource("2_lxp54")

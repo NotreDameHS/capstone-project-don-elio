@@ -1,0 +1,18 @@
+extends Area2D
+class_name Mob
+@onready var hitbox := $Hitbox
+@export var hitbox_size := 100
+@export var speed := 50
+@export var health := 100
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	hitbox.shape = hitbox.shape.duplicate()		# Duplicate it so it's unique to this tower
+	hitbox.shape.radius = hitbox_size
+
+
+
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

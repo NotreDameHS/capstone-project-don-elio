@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://co48w0mi0avur"]
+
+[ext_resource type="PackedScene" uid="uid://be0r1opel7ue" path="res://Player/Weapons/weapon.tscn" id="1_ggwqn"]
+[ext_resource type="PackedScene" uid="uid://0ckwlb8bkt7e" path="res://Player/Weapons/Projectiles/axe_projectile.tscn" id="2_wp4jv"]
+
+[sub_resource type="GDScript" id="GDScript_wp4jv"]
+script/source = "extends \"res://weapon.gd\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Axe" unique_id=1605596866 groups=["Weapon"] instance=ExtResource("1_ggwqn")]
+script = SubResource("GDScript_wp4jv")
+damage = 50
+attack_speed = 1.0
+projectile_scene = ExtResource("2_wp4jv")

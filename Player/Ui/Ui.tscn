@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://lhcoce0pudu8"]
+
+[sub_resource type="Theme" id="Theme_74chg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_je7wo"]
+bg_color = Color(0.88235295, 0.38039216, 0.72156864, 0.77254903)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcwcp"]
+bg_color = Color(0.51238215, 0.11684609, 0.5126926, 1)
+
+[node name="Ui" type="CanvasLayer" unique_id=685738124]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2118607700]
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="TextureProgressBar" type="ProgressBar" parent="HBoxContainer" unique_id=140725569]
+layout_mode = 2
+theme = SubResource("Theme_74chg")
+theme_override_styles/background = SubResource("StyleBoxFlat_je7wo")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tcwcp")
+value = 50.0
+show_percentage = false

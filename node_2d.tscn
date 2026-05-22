@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cp0a1380eaj4d"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_y32ns"]
+
+[node name="Node2D" type="Node2D" unique_id=1985856047]
+
+[node name="Map" type="Sprite2D" parent="." unique_id=858536734]
+texture = SubResource("ViewportTexture_y32ns")

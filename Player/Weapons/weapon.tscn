@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://be0r1opel7ue"]
+
+[ext_resource type="Script" uid="uid://dxd1fe1tc6cpr" path="res://weapon.gd" id="1_xgcik"]
+
+[node name="Weapon" type="Node2D" unique_id=1605596866]
+script = ExtResource("1_xgcik")
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=82556400 groups=["Weapon"]]
+autostart = true
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b4ysbstrrmuiq"]
+
+[ext_resource type="Script" uid="uid://capsmvb42it2o" path="res://Mobs/mob.gd" id="1_npuaf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_npuaf"]
+
+[node name="Mob" type="Area2D" unique_id=1979868123 groups=["Mob"]]
+script = ExtResource("1_npuaf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393448604]
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=857033006]
+shape = SubResource("CircleShape2D_npuaf")

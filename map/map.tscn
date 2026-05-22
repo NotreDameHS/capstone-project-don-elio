@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bvgtmjnc4vp0b"]
+
+[ext_resource type="Texture2D" uid="uid://bagoip1g0n8dx" path="res://map/background.png" id="1_hgrid"]
+
+[node name="Map" type="Node2D" unique_id=1840484172]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1986296591]
+position = Vector2(577.00006, 324.50003)
+scale = Vector2(7.666667, 3.2350001)
+texture = ExtResource("1_hgrid")

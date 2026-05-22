@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://rn5xs2eqd666"]
+
+[ext_resource type="Script" uid="uid://d1ckm5tcn4quc" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://Assets/kenney_alien-ufo-pack/PNG/shipBeige_manned.png" id="2_4ntmi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_btcbx"]
+radius = 49.0
+height = 140.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ntmi"]
+bg_color = Color(0.5790482, 0, 0.14912945, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btcbx"]
+bg_color = Color(0.7176471, 0.2, 0.16470589, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Player" type="Area2D" unique_id=2093391887]
+script = ExtResource("1_l8h54")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1456446642]
+texture = ExtResource("2_4ntmi")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=165676439]
+shape = SubResource("CapsuleShape2D_btcbx")
+
+[node name="UI" type="Control" parent="." unique_id=1709133195]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="ProgressBar" parent="UI" unique_id=1624973788]
+layout_mode = 0
+offset_left = -83.0
+offset_top = -95.0
+offset_right = 84.0
+offset_bottom = -74.0
+theme_override_styles/background = SubResource("StyleBoxFlat_4ntmi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_btcbx")
+value = 50.0
+show_percentage = false

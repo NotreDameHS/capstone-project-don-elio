@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dqk3u2gbekgig"]
+
+[ext_resource type="Script" uid="uid://bmcqdj42ju4xr" path="res://projectile.gd" id="1_6j0c7"]
+
+[node name="Projectile" type="Area2D" unique_id=142943135]
+script = ExtResource("1_6j0c7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1360138503]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2053560303]
+
+[node name="Lifespan" type="Timer" parent="." unique_id=1859295310]
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Lifespan" to="." method="_on_lifespan_timeout"]
