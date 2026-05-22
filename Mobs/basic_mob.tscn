@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://pnr34cqadsqd"]
+
+[ext_resource type="PackedScene" uid="uid://b4ysbstrrmuiq" path="res://Mobs/mob.tscn" id="1_wm7p1"]
+[ext_resource type="Texture2D" uid="uid://mdscwrcpy181" path="res://assets/dome.png" id="2_5krne"]
+
+[node name="Basic Mob" unique_id=1979868123 instance=ExtResource("1_wm7p1")]
+hitbox_size = 50
+
+[node name="Sprite2D" parent="." index="0" unique_id=1393448604]
+texture = ExtResource("2_5krne")
