@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqk3u2gbekgig"]
 
-[ext_resource type="Script" path="res://Player/Weapons/Projectiles/projectile.gd" id="1_6j0c7"]
+[ext_resource type="Script" uid="uid://bmcqdj42ju4xr" path="res://Player/Weapons/Projectiles/projectile.gd" id="1_6j0c7"]
 
 [node name="Projectile" type="Area2D" unique_id=142943135]
 collision_layer = 4
