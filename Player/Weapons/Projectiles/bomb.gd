@@ -7,6 +7,7 @@ class_name Projectile
 @onready var explosion_sprite := $ExplosionSprite
 @onready var hitbox := $Hitbox
 @export var hitbox_size := 300
+@export var damage := 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	lifetimer.wait_time = lifespan
@@ -30,4 +31,5 @@ func _on_lifespan_timeout() -> void:
 	queue_free()
 	
 func _on_area_entered(area: Area2D) -> void:
-	pass #
+	if area is Mob:
+		area.take_damage(damage)

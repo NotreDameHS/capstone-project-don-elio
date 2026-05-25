@@ -11,6 +11,7 @@ radius = 115.10864
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_oj23l")
+damage = 30
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1972361601]
 shape = SubResource("CircleShape2D_7csma")
@@ -29,4 +30,5 @@ wait_time = 0.5
 one_shot = true
 autostart = true
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Lifespan" to="." method="_on_lifespan_timeout"]
