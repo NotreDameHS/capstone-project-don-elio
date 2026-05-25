@@ -10,10 +10,105 @@ bg_color = Color(0.88235295, 0.38039216, 0.72156864, 0.77254903)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcwcp"]
 bg_color = Color(0.51238215, 0.11684609, 0.5126926, 1)
 
-[node name="Ui" type="CanvasLayer" unique_id=685738124]
+[sub_resource type="FontFile" id="FontFile_je7wo"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/31/0/ascent = 0.0
+cache/0/31/0/descent = 0.0
+cache/0/31/0/underline_position = 0.0
+cache/0/31/0/underline_thickness = 0.0
+cache/0/31/0/scale = 1.0
+
+[node name="Ui" type="Control" unique_id=1695453297 node_paths=PackedStringArray("stopwatch_label") groups=["StopWatch"]]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_je7wo")
+stopwatch_label = NodePath("StopWatch Label")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=321688623]
+layout_mode = 0
 offset_left = 5.0
 offset_right = 45.0
 offset_bottom = 40.0
@@ -45,27 +140,31 @@ text = "Timer"
 
 [node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/Timer" unique_id=727128101]
 layout_mode = 0
-offset_left = 1026.0
+offset_left = 974.0
 offset_top = 24.0
 offset_right = 1070.0
-offset_bottom = 62.0
+offset_bottom = 98.0
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Timer/Quit" unique_id=1367068981]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 7.0
-offset_right = 45.0
-offset_bottom = 30.0
+offset_left = 15.0
+offset_top = 12.0
+offset_right = 79.0
+offset_bottom = 59.0
+theme_override_fonts/font = SubResource("FontFile_je7wo")
+theme_override_font_sizes/font_size = 31
 text = "Quit"
 
 [node name="StopWatch Label" type="Label" parent="." unique_id=121124243]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+offset_left = 502.0
+offset_top = 4.0
+offset_right = 544.0
+offset_bottom = 27.0
 grow_horizontal = 2
-text = "00:00"
+text = "00:00:000"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Timer/Quit" to="." method="_on_button_pressed"]

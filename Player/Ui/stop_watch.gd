@@ -1,6 +1,6 @@
 extends Node2D
-
 class_name  StopWatch
+
 var time = 0.0
 var stopped = false
 
@@ -11,3 +11,12 @@ func _process(delta: float) -> void:
 	
 func reset():
 	time = 0.0
+
+
+func time_to_string() -> String:
+	var msec = fmod(time, 1) * 1000
+	var sec =  fmod(time, 60)
+	var min = time / 60
+	var format_string = "%02d : %02d : %02d"
+	var acutal_string = format_string % [min, sec, msec]
+	return acutal_string
