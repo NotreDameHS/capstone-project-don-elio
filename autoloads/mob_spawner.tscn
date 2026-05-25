@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://y26c3ej2hojq"]
+
+[ext_resource type="Script" uid="uid://c4cyg72adh4uk" path="res://autoloads/mob_spawner.gd" id="1_vg0l3"]
+
+[sub_resource type="GDScript" id="GDScript_o2jl3"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="Curve2D" id="Curve2D_03qkr"]
+
+[node name="Mob Spawner" type="Node2D" unique_id=1092428988]
+script = SubResource("GDScript_o2jl3")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1657624244]
+curve = SubResource("Curve2D_03qkr")
+script = ExtResource("1_vg0l3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=922325030]
+
+[node name="Timer" type="Timer" parent="Path2D" unique_id=572936018]
+
+[connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
