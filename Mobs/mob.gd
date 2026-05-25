@@ -5,6 +5,7 @@ class_name Mob
 @export var speed := 50
 @export var health := 100
 @export var max_health := 100
+@export var damage := 0
 var player : Node = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

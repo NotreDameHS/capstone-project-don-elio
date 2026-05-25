@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ji4cdbfdd34i"]
+
+[ext_resource type="Texture2D" uid="uid://14wdmmbjma2x" path="res://assets/blue circle.png" id="1_kg46t"]
+[ext_resource type="Script" uid="uid://bbb40racgdid8" path="res://entities/collectibles/collectable.gd" id="1_marlb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_marlb"]
+radius = 45.01111
+
+[node name="Collectable" type="Area2D" unique_id=1973855208 groups=["Collectable"]]
+collision_layer = 8
+script = ExtResource("1_marlb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1599023911]
+scale = Vector2(0.082278475, 0.082278475)
+texture = ExtResource("1_kg46t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1400694683]
+shape = SubResource("CircleShape2D_marlb")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
