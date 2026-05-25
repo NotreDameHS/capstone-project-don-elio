@@ -22,3 +22,12 @@ func _physics_process(delta: float) -> void:
 	
 func take_damage(damage):
 	health -= damage
+	#ui stuff
+	if health <= 0:
+		die()
+		
+func die():
+	#write collectable spawning code here
+	pass
+	queue_free()
+	
