@@ -5,7 +5,11 @@ class_name Mob
 @export var speed := 50
 @export var health := 100
 @export var max_health := 100
+@export var damage := 0
 var player : Node = null
+#@export var collectable : PackedScene = null
+const collectable = preload("res://entities/collectibles/collectable.tscn")
+@export var exp_dropped := 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hitbox.shape = hitbox.shape.duplicate()		# Duplicate it so it's unique to this mob
@@ -19,15 +23,18 @@ func _physics_process(delta: float) -> void:
 	var player := get_tree().get_nodes_in_group("Player")[0]
 	position = position.move_toward(player.global_position, speed * delta)
 	pass
-	
+
 func take_damage(damage):
 	health -= damage
 	#ui stuff
 	if health <= 0:
 		die()
-		
+
 func die():
-	#write collectable spawning code here
-	pass
+	for num in exp_dropped:
+		var exp = collectable.instantiate()
+		add_child(exp)
+		exp.global_position = global_position
+		exp.reparent(get_tree().current_scene)
 	queue_free()
 	
