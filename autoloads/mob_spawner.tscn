@@ -38,11 +38,10 @@ script = ExtResource("1_vg0l3")
 mob_scene = ExtResource("2_o2jl3")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=922325030]
-position = Vector2(580.97107, 346)
+position = Vector2(1177.1545, -45)
 rotation = 1.5613002
 
 [node name="Timer" type="Timer" parent="Path2D" unique_id=572936018]
-wait_time = 0.1
 autostart = true
 
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
