@@ -2,10 +2,10 @@ extends Path2D
 
 @export var mob_scene: PackedScene
 @onready var spawn_follow = $PathFollow2D
-
+var rng := RandomNumberGenerator.new()
 func _on_timer_timeout():
-	# Randomly pick a point along the Path2D
-	spawn_follow.progress_ratio = randf()
+	var rng := RandomNumberGenerator.new()
+	spawn_follow.progress_ratio = rng.randf()
 	
 	# Instance and position the mob
 	var mob = mob_scene.instantiate()
