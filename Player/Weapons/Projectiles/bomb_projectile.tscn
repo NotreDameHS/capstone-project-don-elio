@@ -14,15 +14,15 @@ script = ExtResource("1_oj23l")
 damage = 30
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1972361601]
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_7csma")
 
 [node name="BombSprite" type="Sprite2D" parent="." unique_id=311658258]
-scale = Vector2(0.4032258, 1)
+scale = Vector2(0.202, 0.5)
 texture = ExtResource("2_oj23l")
 
 [node name="ExplosionSprite" type="Sprite2D" parent="." unique_id=1836373823]
-visible = false
-scale = Vector2(3, 3)
+scale = Vector2(0.6648936, 0.6648936)
 texture = ExtResource("3_qibx6")
 
 [node name="Lifespan" type="Timer" parent="." unique_id=2090645208]

@@ -1,8 +1,8 @@
 extends Area2D
 class_name Mob
 @onready var hitbox := $Hitbox
-@export var hitbox_size := 100
-@export var speed := 50
+@export var hitbox_size := 50
+@export var speed := 30
 @export var health := 100
 @export var max_health := 100
 @export var damage := 0

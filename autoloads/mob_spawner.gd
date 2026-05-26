@@ -11,3 +11,4 @@ func _on_timer_timeout():
 	var mob = mob_scene.instantiate()
 	mob.global_position = spawn_follow.global_position
 	get_parent().add_child(mob)
+	mob.reparent(get_tree().current_scene)

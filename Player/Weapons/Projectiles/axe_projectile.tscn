@@ -8,22 +8,24 @@ radius = 124.0
 height = 784.0
 
 [node name="Axe Projectile" unique_id=142943135 instance=ExtResource("1_jwup7")]
+scale = Vector2(0.5, 0.5)
 lifespan = 0.1
 projectile_speed = 0
 damage = 50
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=1360138503]
 rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CapsuleShape2D_x6xev")
 
 [node name="Sprite2D" parent="." index="1" unique_id=2053560303]
-position = Vector2(100, 0)
-scale = Vector2(0.93652344, 0.6041666)
+position = Vector2(70, 3.8146973e-06)
+scale = Vector2(0.57176894, 0.3420139)
 texture = ExtResource("2_cby87")
 flip_h = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="." index="3" unique_id=304127470]
-position = Vector2(-100, 2)
-scale = Vector2(0.93652344, 0.6041666)
+position = Vector2(-80, -7.6293945e-06)
+scale = Vector2(0.6028197, 0.38888887)
 texture = ExtResource("2_cby87")
 flip_v = true

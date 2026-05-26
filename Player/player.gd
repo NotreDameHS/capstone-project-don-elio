@@ -1,6 +1,6 @@
 extends Area2D
 class_name Player
-@export var max_speed := 500
+@export var max_speed := 300
 @onready var hitbox := $Hitbox
 @export var hitbox_size := 65
 @export var level = 1

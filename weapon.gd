@@ -20,7 +20,7 @@ func _on_attack_timer_timeout() -> void:
 		var projectile = projectile_scene.instantiate()
 		get_tree().current_scene.add_child(projectile)
 		projectile.position = get_parent().global_position
-		projectile.position.y += randf_range(-70, 70)
-		projectile.position.x += randf_range(-70, 70)
+		projectile.position.y += randf_range(-35, 35)
+		projectile.position.x += randf_range(-35, 35)
 		await get_tree().create_timer(0.2).timeout	
 	

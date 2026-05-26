@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bptwh0vxtkvm" path="res://assets/background.png" id="1_hgrid"]
 [ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://co48w0mi0avur" path="res://Player/Weapons/axe.tscn" id="4_kffv2"]
-[ext_resource type="PackedScene" uid="uid://pnr34cqadsqd" path="res://Mobs/basic_mob.tscn" id="5_kffv2"]
+[ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="4_lgq1i"]
 
 [node name="Map" type="Node2D" unique_id=1840484172]
 
@@ -16,5 +16,9 @@ texture = ExtResource("1_hgrid")
 
 [node name="Axe" parent="Player" unique_id=1605596866 instance=ExtResource("4_kffv2")]
 
-[node name="Basic Mob" parent="." unique_id=1979868123 instance=ExtResource("5_kffv2")]
-position = Vector2(825, 115)
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1641254171]
+zoom = Vector2(1.1, 1.1)
+position_smoothing_enabled = true
+position_smoothing_speed = 50.0
+
+[node name="Mob Spawner" parent="Player/Camera2D" unique_id=1092428988 instance=ExtResource("4_lgq1i")]

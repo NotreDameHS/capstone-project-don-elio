@@ -10,6 +10,7 @@ script = ExtResource("1_6j0c7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1360138503]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2053560303]
+scale = Vector2(0.5, 0.5)
 
 [node name="Lifespan" type="Timer" parent="." unique_id=1859295310]
 autostart = true
