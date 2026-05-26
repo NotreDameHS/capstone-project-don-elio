@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Alien Survivor"
+config/name="Alien Survivor REal"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
