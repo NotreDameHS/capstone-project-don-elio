@@ -22,4 +22,5 @@ position_smoothing_enabled = true
 position_smoothing_speed = 50.0
 
 [node name="Mob Spawner" parent="Player" unique_id=1092428988 instance=ExtResource("4_lgq1i")]
-scale = Vector2(3, 3)
+position = Vector2(-1852, -1008)
+scale = Vector2(3.5, 3.5)

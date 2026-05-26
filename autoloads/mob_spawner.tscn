@@ -9,16 +9,16 @@ script/source = "extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var location : Vector2 = get_parent().global_position
-	global_position.x = location.x
-	global_position.y = location.y
-
+	#var location : Vector2 = get_parent().global_position
+	#global_position.x = location.x
+	#global_position.y = location.y
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var location : Vector2 = get_parent().global_position
-	global_position.x = location.x
-	global_position.y = location.y
+	#var location : Vector2 = get_parent().global_position
+	#global_position = location
+	pass
 "
 
 [sub_resource type="Curve2D" id="Curve2D_03qkr"]
@@ -38,7 +38,7 @@ script = ExtResource("1_vg0l3")
 mob_scene = ExtResource("2_o2jl3")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=922325030]
-position = Vector2(1177.1545, -45)
+position = Vector2(580.97107, 346)
 rotation = 1.5613002
 
 [node name="Timer" type="Timer" parent="Path2D" unique_id=572936018]

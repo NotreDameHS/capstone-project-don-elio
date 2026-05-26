@@ -2,7 +2,9 @@ extends Path2D
 
 @export var mob_scene: PackedScene
 @onready var spawn_follow = $PathFollow2D
+const Mob = preload("res://Mobs/basic_mob.tscn")
 var rng := RandomNumberGenerator.new()
+
 func _on_timer_timeout():
 	var rng := RandomNumberGenerator.new()
 	spawn_follow.progress_ratio = rng.randf()
