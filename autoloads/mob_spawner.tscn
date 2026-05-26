@@ -9,21 +9,23 @@ script/source = "extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var location : Vector2 = get_parent().global_position
+	global_position.x = location.x
+	global_position.y = location.y
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var scr_size := get_viewport().get_visible_rect().get_center()
-	global_position.x = scr_size.x
-	global_position.y = scr_size.y
+	var location : Vector2 = get_parent().global_position
+	global_position.x = location.x
+	global_position.y = location.y
 "
 
 [sub_resource type="Curve2D" id="Curve2D_03qkr"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 4, -52, 0, 0, 0, 0, 1191, -51, 0, 0, 0, 0, 1196.9613, 717, 0, 0, 0, 0, -32.048306, 711, 0, 0, 0, 0, -37, 702, 0, 0, 0, 0, -38.980675, -50, 0, 0, 0, 0, 6.574881, -51)
+"points": PackedVector2Array(0, 0, 0, 0, 1177.1545, -45, 0, 0, 0, 0, 1184.0869, 685, 0, 0, 0, 0, -37, 682, 0, 0, 0, 0, -35.01932, -44, 0, 0, 0, 0, 1177.1545, -45)
 }
-point_count = 7
+point_count = 5
 
 [node name="Mob Spawner" type="Node2D" unique_id=1092428988]
 script = SubResource("GDScript_o2jl3")
@@ -36,10 +38,11 @@ script = ExtResource("1_vg0l3")
 mob_scene = ExtResource("2_o2jl3")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=922325030]
-position = Vector2(4, -52)
-rotation = 0.0008424598
+position = Vector2(1177.1545, -45)
+rotation = 1.5613002
 
 [node name="Timer" type="Timer" parent="Path2D" unique_id=572936018]
+wait_time = 0.1
 autostart = true
 
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
