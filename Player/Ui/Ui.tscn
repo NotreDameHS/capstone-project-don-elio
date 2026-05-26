@@ -101,14 +101,11 @@ cache/0/31/0/underline_position = 0.0
 cache/0/31/0/underline_thickness = 0.0
 cache/0/31/0/scale = 1.0
 
-[node name="Ui" type="Control" unique_id=1695453297 node_paths=PackedStringArray("stopwatch_label") groups=["StopWatch"]]
-layout_mode = 3
-anchors_preset = 0
+[node name="Ui" type="CanvasLayer" unique_id=705736641 node_paths=PackedStringArray("stopwatch_label")]
 script = ExtResource("1_je7wo")
 stopwatch_label = NodePath("StopWatch Label")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=321688623]
-layout_mode = 0
 offset_left = 5.0
 offset_right = 45.0
 offset_bottom = 40.0
@@ -156,15 +153,17 @@ theme_override_font_sizes/font_size = 31
 text = "Quit"
 
 [node name="StopWatch Label" type="Label" parent="." unique_id=121124243]
-layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 502.0
-offset_top = 4.0
-offset_right = 544.0
-offset_bottom = 27.0
+offset_left = -23.0
+offset_top = 2.0
+offset_right = 50.0
+offset_bottom = 25.0
 grow_horizontal = 2
-text = "00:00:000"
+text = "00:00"
+
+[node name="Timer" type="Timer" parent="." unique_id=2072266325]
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Timer/Quit" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -23,7 +23,6 @@ GameManager="*uid://p2n8rn8wlyb3"
 Player=""
 Mob=""
 Weapon=""
-StopWatch=""
 Collectable=""
 
 [input]

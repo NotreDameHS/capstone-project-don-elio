@@ -1,24 +1,30 @@
-extends Node
+extends CanvasLayer
 class_name Ui
 
 @export var stopwatch_label : Label
 
-var stopwatch : StopWatch
+
+var total_time_in_secs : int = 0
 
 func _ready() -> void:
-	stopwatch = get_tree().get_first_node_in_group("stopwatch")
-
-func update_stopwatch_label():
-	stopwatch_label.text = stopwatch.time_to_string()
+	$Timer.start()
 	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	update_stopwatch_label()
 	pass
+
+
 
 
 func _on_button_pressed() -> void:
 	get_tree().quit()
+	pass # Replace with function body.
+
+
+func _on_timer_timeout() -> void:
+	total_time_in_secs += 1
+	var m = int(total_time_in_secs / 60.0)
+	var s = total_time_in_secs - m * 60
+	$"StopWatch Label".text = '%02d:%02d' % [m, s] 
 	pass # Replace with function body.
