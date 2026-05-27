@@ -1,25 +1,25 @@
 [gd_scene format=3 uid="uid://bvgtmjnc4vp0b"]
 
-[ext_resource type="Texture2D" uid="uid://bptwh0vxtkvm" path="res://assets/background.png" id="1_hgrid"]
+[ext_resource type="PackedScene" uid="uid://drj8yei3eyg22" path="res://map/tile_map_layer.tscn" id="1_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://co48w0mi0avur" path="res://Player/Weapons/axe.tscn" id="4_kffv2"]
 [ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="4_lgq1i"]
 
 [node name="Map" type="Node2D" unique_id=1840484172]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1986296591]
-position = Vector2(577.00006, 324.50003)
-scale = Vector2(7.666667, 3.2350001)
-texture = ExtResource("1_hgrid")
-
 [node name="Player" parent="." unique_id=2093391887 instance=ExtResource("2_lgq1i")]
+
+[node name="Tile map" parent="Player" unique_id=1553319412 instance=ExtResource("1_lgq1i")]
+z_index = -10
+z_as_relative = false
+position = Vector2(-5400, -3580.0002)
+scale = Vector2(10, 10)
 
 [node name="Axe" parent="Player" unique_id=1605596866 instance=ExtResource("4_kffv2")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1641254171]
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
-position_smoothing_speed = 50.0
 
 [node name="Mob Spawner" parent="Player" unique_id=1092428988 instance=ExtResource("4_lgq1i")]
 position = Vector2(-1852, -1008)

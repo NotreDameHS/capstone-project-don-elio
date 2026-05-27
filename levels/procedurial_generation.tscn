@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://40g5lwtx1sso"]
+
+[ext_resource type="Texture2D" uid="uid://cpl4qp4rhtt8l" path="res://map/purple.png" id="2_7r1rt"]
+[ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_etpbw"]
+
+[sub_resource type="GDScript" id="GDScript_etpbw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6w4vu"]
+texture = ExtResource("2_7r1rt")
+texture_region_size = Vector2i(128, 128)
+1:0/0 = 0
+0:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q2tri"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_6w4vu")
+
+[node name="Procedurial Generation" type="Node2D" unique_id=561750040]
+script = SubResource("GDScript_etpbw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=865146979]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=2084246222]
+tile_set = SubResource("TileSet_q2tri")
+format = 2
+
+[node name="Player" parent="." unique_id=2093391887 instance=ExtResource("2_etpbw")]

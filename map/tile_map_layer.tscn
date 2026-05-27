@@ -1,10 +1,9 @@
 [gd_scene format=4 uid="uid://drj8yei3eyg22"]
 
-[ext_resource type="Texture2D" uid="uid://cpl4qp4rhtt8l" path="res://autoloads/purple.png" id="1_ue2jw"]
-[ext_resource type="Texture2D" uid="uid://b4x72cokv6ytl" path="res://autoloads/darkPurple.png" id="2_kdx0q"]
+[ext_resource type="Texture2D" uid="uid://cpl4qp4rhtt8l" path="res://map/purple.png" id="1_f51wk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ynn4h"]
-texture = ExtResource("1_ue2jw")
+texture = ExtResource("1_f51wk")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 
@@ -12,8 +11,11 @@ texture_region_size = Vector2i(256, 256)
 tile_size = Vector2i(256, 256)
 sources/0 = SubResource("TileSetAtlasSource_ynn4h")
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dlwgi"]
+load_path = "res://.godot/imported/darkPurple.png-afc79be837901d2b8e948321fb7988ec.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qegc0"]
-texture = ExtResource("2_kdx0q")
+texture = SubResource("CompressedTexture2D_dlwgi")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:1/0 = 0
