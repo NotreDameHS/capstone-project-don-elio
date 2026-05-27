@@ -3,40 +3,14 @@ class_name Player
 @export var max_speed := 300
 @onready var hitbox := $Hitbox
 @export var hitbox_size := 65
-@export var level = 1
-@export var health := 100
-@export var max_health := 100
 @onready var health_bar := $UI/HealthBar
-
-var experience = 0
-var experience_total = 0
-var experience_required = get_required_experience(level + 1)
-
-
-func get_required_experience(_level):
-	return round(pow(level, 1.8) + level * 4)
-
-func gain_experience(amount):
-	experience_total += amount
-	experience += amount
-	while experience >= experience_required:
-		experience -= experience_required
-		levelup()
-		
-func levelup():
-	level += 1
-	experience_required = get_required_experience(level + 1)
-
-
-
 
 
 func _ready() -> void:
 	hitbox.shape = hitbox.shape.duplicate()
 	hitbox.shape.radius = hitbox_size
-	health = max_health
-	health_bar.max_value = max_health
-	health_bar.value = max_health
+	health_bar.max_value = GameManager.max_health
+	health_bar.value = GameManager.health
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -49,16 +23,16 @@ func _physics_process(delta: float) -> void:
 	position += velocity
 	
 func take_damage(amount):
-	health -= amount
+	GameManager.health -= amount
 	health_bar.value -= amount
-	if health <= 0:
+	if GameManager.health <= 0:
 		die()
 
 func die():
-	pass #FINISH KATER
+	pass #FINISH LATER
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Collectable:
-		gain_experience(25)
+		GameManager._gain_exp()
 	if area is Mob:
 		take_damage(area.damage)
