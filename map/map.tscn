@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bvgtmjnc4vp0b"]
 
+[ext_resource type="PackedScene" uid="uid://lhcoce0pudu8" path="res://Player/Ui/Ui.tscn" id="1_kffv2"]
 [ext_resource type="PackedScene" uid="uid://drj8yei3eyg22" path="res://map/tile_map_layer.tscn" id="1_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://co48w0mi0avur" path="res://Player/Weapons/axe.tscn" id="4_kffv2"]
@@ -7,13 +8,17 @@
 
 [node name="Map" type="Node2D" unique_id=1840484172]
 
-[node name="Player" parent="." unique_id=2093391887 instance=ExtResource("2_lgq1i")]
-
-[node name="Tile map" parent="Player" unique_id=1553319412 instance=ExtResource("1_lgq1i")]
+[node name="Tile map" parent="." unique_id=1553319412 instance=ExtResource("1_lgq1i")]
 z_index = -10
 z_as_relative = false
-position = Vector2(-5400, -3580.0002)
-scale = Vector2(10, 10)
+position = Vector2(-2948, -1813.9999)
+scale = Vector2(1000000000000, 1000000000000)
+
+[node name="Ui" parent="." unique_id=705736641 instance=ExtResource("1_kffv2")]
+offset = Vector2(-10, 0)
+transform = Transform2D(1, 0, 0, 1, -10, 0)
+
+[node name="Player" parent="." unique_id=2093391887 instance=ExtResource("2_lgq1i")]
 
 [node name="Axe" parent="Player" unique_id=1605596866 instance=ExtResource("4_kffv2")]
 
