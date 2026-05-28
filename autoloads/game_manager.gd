@@ -1,8 +1,8 @@
 extends Node
-const player := preload("res://Player/player.tscn")
-const axe := preload("res://Player/Weapons/axe.tscn")
-const bomb := preload("res://Player/Weapons/bomb.tscn")
-const fun_ball := preload("res://Player/Weapons/gun.tscn")
+@onready var player := preload("res://Player/player.tscn")
+@onready var axe := preload("res://Player/Weapons/axe.tscn")
+@onready var bomb := preload("res://Player/Weapons/bomb.tscn")
+@onready var fun_ball := preload("res://Player/Weapons/gun.tscn")
 var level := 0
 var exp := 0
 var exp_to_level_up := 100
@@ -21,7 +21,7 @@ var ball_level := 0
 func _ready() -> void:
 	health = max_health
 	var player = player.instantiate()
-	player.axe_upgrade()
+	#player.axe_upgrade()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

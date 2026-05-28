@@ -11,6 +11,7 @@ func _ready() -> void:
 	hitbox.shape.radius = hitbox_size
 	health_bar.max_value = GameManager.max_health
 	health_bar.value = GameManager.health
+	axe_upgrade()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -39,13 +40,17 @@ func _on_area_entered(area: Area2D) -> void:
 
 func axe_upgrade():
 	if GameManager.axe_level == 0:
-		var add_axe = GameManager.axe.instantiate()
+		var axe_scene := GameManager.axe
+		print(axe_scene)
+		var add_axe = axe_scene.instantiate()
+		print(add_axe)
 		add_child(add_axe)
+		print("anytghnjig")
 		
 func bomb_upgrade():
 	if GameManager.bomb_level == 0:
 		var add_bomb = GameManager.bomb.instantiate()
-		get_tree().get_root().add_child(add_bomb)
+		add_child(add_bomb)
 			
 func ball_upgrade():
 	if GameManager.ball_level == 0:
