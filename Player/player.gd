@@ -40,12 +40,8 @@ func _on_area_entered(area: Area2D) -> void:
 
 func axe_upgrade():
 	if GameManager.axe_level == 0:
-		var axe_scene := GameManager.axe
-		print(axe_scene)
-		var add_axe = axe_scene.instantiate()
-		print(add_axe)
+		var add_axe = GameManager.axe.instantiate()
 		add_child(add_axe)
-		print("anytghnjig")
 		
 func bomb_upgrade():
 	if GameManager.bomb_level == 0:
