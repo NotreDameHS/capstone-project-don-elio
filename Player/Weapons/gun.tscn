@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bj5renq4nvp"]
+
+[ext_resource type="PackedScene" uid="uid://be0r1opel7ue" path="res://Player/Weapons/weapon.tscn" id="1_yc020"]
+[ext_resource type="PackedScene" uid="uid://kurhwxo01l4" path="res://Player/Weapons/Projectiles/bullet.tscn" id="2_lsqma"]
+
+[node name="Gun" unique_id=1605596866 instance=ExtResource("1_yc020")]
+damage = 30
+attack_speed = 5.0
+projectile_scene = ExtResource("2_lsqma")
