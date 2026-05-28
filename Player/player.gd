@@ -36,3 +36,18 @@ func _on_area_entered(area: Area2D) -> void:
 		GameManager._gain_exp()
 	if area is Mob:
 		take_damage(area.damage)
+
+func axe_upgrade():
+	if GameManager.axe_level == 0:
+		var add_axe = GameManager.axe.instantiate()
+		add_child(add_axe)
+		
+func bomb_upgrade():
+	if GameManager.bomb_level == 0:
+		var add_bomb = GameManager.bomb.instantiate()
+		get_tree().get_root().add_child(add_bomb)
+			
+func ball_upgrade():
+	if GameManager.ball_level == 0:
+		var add_ball = GameManager.fun_ball.instantiate()
+		add_child(add_ball)

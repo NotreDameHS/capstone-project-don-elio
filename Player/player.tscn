@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://d1ckm5tcn4quc" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://assets/shipBeige_manned.png" id="2_4ntmi"]
-[ext_resource type="PackedScene" uid="uid://bj5renq4nvp" path="res://Player/Weapons/gun.tscn" id="3_btcbx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_btcbx"]
 radius = 49.0
@@ -56,7 +55,5 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_btcbx")
 value = 50.0
 show_percentage = false
 metadata/_edit_use_anchors_ = true
-
-[node name="Gun" parent="." unique_id=1605596866 instance=ExtResource("3_btcbx")]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
