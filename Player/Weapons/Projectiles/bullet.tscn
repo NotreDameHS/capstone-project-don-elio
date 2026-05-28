@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://kurhwxo01l4"]
+
+[ext_resource type="PackedScene" uid="uid://dqk3u2gbekgig" path="res://Player/Weapons/Projectiles/projectile.tscn" id="1_33227"]
+[ext_resource type="Script" uid="uid://d4k6qvw7yfodm" path="res://Player/Weapons/Projectiles/bullet.gd" id="2_owjd5"]
+[ext_resource type="Texture2D" uid="uid://dq7sedgmnthb4" path="res://assets/image-removebg-preview (2).png" id="2_st631"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_33227"]
+radius = 1.5
+
+[node name="Bullet" unique_id=142943135 instance=ExtResource("1_33227")]
+scale = Vector2(2, 2)
+script = ExtResource("2_owjd5")
+damage = 30
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1360138503]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_33227")
+
+[node name="Sprite2D" parent="." index="1" unique_id=2053560303]
+scale = Vector2(0.017578125, 0.017578125)
+texture = ExtResource("2_st631")

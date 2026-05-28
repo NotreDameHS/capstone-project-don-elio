@@ -1,11 +1,11 @@
 extends Node
 var level := 0
-var exp := 0
+var exp := -100
 var exp_to_level_up := 100
 var max_speed := 300
 var health := 100
 var max_health := 100
-
+var upgrade_options : Array = ["Axe", "Bomb", "Fun_ball", "proj_num", "attack_speed", "health", "  "]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
