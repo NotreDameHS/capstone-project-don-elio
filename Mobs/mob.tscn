@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b4ysbstrrmuiq"]
 
 [ext_resource type="Script" uid="uid://capsmvb42it2o" path="res://Mobs/mob.gd" id="1_npuaf"]
+[ext_resource type="PackedScene" uid="uid://ji4cdbfdd34i" path="res://entities/collectibles/collectable.tscn" id="2_3ogw4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_npuaf"]
 
@@ -8,6 +9,7 @@
 collision_layer = 2
 script = ExtResource("1_npuaf")
 speed = 120
+loot_scene = ExtResource("2_3ogw4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1393448604]
 

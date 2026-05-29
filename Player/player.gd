@@ -6,6 +6,14 @@ class_name Player
 @onready var health_bar := $UI/HealthBar
 
 
+#TODO signals to let ui know things changed
+signal experience_gained(growth_data)
+signal leveled_up
+
+var experience = 0
+var experience_level = 1
+var experience_required = 100
+
 func _ready() -> void:
 	hitbox.shape = hitbox.shape.duplicate()
 	hitbox.shape.radius = hitbox_size
@@ -36,3 +44,17 @@ func _on_area_entered(area: Area2D) -> void:
 		GameManager._gain_exp()
 	if area is Mob:
 		take_damage(area.damage)
+
+func gain_xp(amount):
+	experience += amount
+	if experience_level >= experience_required:
+		experience -= experience_required
+		level_up()
+	
+	leveled_up.emit()
+	
+func level_up():
+	experience_level += 1
+	experience_required = 50
+	
+	print("Leveled Up, New Level: ", experience_level)

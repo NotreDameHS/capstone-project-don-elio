@@ -10,6 +10,7 @@ var player : Node = null
 #@export var collectable : PackedScene = null
 const collectable = preload("res://entities/collectibles/collectable.tscn")
 @export var exp_dropped := 1
+@export var loot_scene : PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hitbox.shape = hitbox.shape.duplicate()		# Duplicate it so it's unique to this mob
@@ -30,6 +31,7 @@ func take_damage(damage):
 	if health <= 0:
 		die()
 
+	
 func die():
 	for num in exp_dropped:
 		var exp = collectable.instantiate()
