@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://lhcoce0pudu8" path="res://Player/Ui/Ui.tscn" id="1_kffv2"]
 [ext_resource type="PackedScene" uid="uid://drj8yei3eyg22" path="res://map/tile_map_layer.tscn" id="1_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_lgq1i"]
-[ext_resource type="PackedScene" uid="uid://co48w0mi0avur" path="res://Player/Weapons/axe.tscn" id="4_kffv2"]
 [ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="4_lgq1i"]
+[ext_resource type="PackedScene" uid="uid://co48w0mi0avur" path="res://Player/Weapons/axe.tscn" id="5_kffv2"]
 
 [node name="Map" type="Node2D" unique_id=1840484172]
 
@@ -20,8 +20,6 @@ transform = Transform2D(1, 0, 0, 1, -10, 0)
 
 [node name="Player" parent="." unique_id=2093391887 instance=ExtResource("2_lgq1i")]
 
-[node name="Axe" parent="Player" unique_id=1605596866 instance=ExtResource("4_kffv2")]
-
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1641254171]
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
@@ -29,3 +27,5 @@ position_smoothing_enabled = true
 [node name="Mob Spawner" parent="Player" unique_id=1092428988 instance=ExtResource("4_lgq1i")]
 position = Vector2(-1852, -1008)
 scale = Vector2(3.5, 3.5)
+
+[node name="Axe" parent="Player" unique_id=1605596866 instance=ExtResource("5_kffv2")]

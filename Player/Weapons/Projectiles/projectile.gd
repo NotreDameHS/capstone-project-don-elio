@@ -4,6 +4,8 @@ extends Area2D
 @onready var lifetimer := $Lifespan
 @export var projectile_speed := 1
 @export var damage := 0
+@onready var sprite := $Sprite2D
+@onready var hitbox := $CollisionShape2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	lifetimer.wait_time = lifespan
