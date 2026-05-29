@@ -3,6 +3,8 @@ extends "res://Player/Weapons/Projectiles/projectile.gd"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	lifetimer.wait_time = lifespan
+	lifetimer.start()
 	sprite.scale *= GameManager.axe_size
 	hitbox.shape.radius *= GameManager.axe_size
 
