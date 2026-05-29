@@ -36,6 +36,12 @@ func take_damage(amount):
 	if GameManager.health <= 0:
 		die()
 
+
+
+
+
+
+
 func die():
 	pass #FINISH LATER
 

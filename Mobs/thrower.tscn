@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d1x07tydkfx5w"]
+
+[ext_resource type="PackedScene" uid="uid://b4ysbstrrmuiq" path="res://Mobs/mob.tscn" id="1_mdbar"]
+[ext_resource type="Script" uid="uid://cva3yj3feds3u" path="res://thrower.gd" id="2_dx7sl"]
+[ext_resource type="Texture2D" uid="uid://cqjvyuyf8cmt8" path="res://assets/laserBlue2.png" id="3_qlvmv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3t4b"]
+size = Vector2(71, 104)
+
+[node name="Thrower" unique_id=1979868123 instance=ExtResource("1_mdbar")]
+script = ExtResource("2_dx7sl")
+hitbox_size = null
+speed = 100
+health = null
+max_health = 150
+damage = 20
+exp_dropped = 3
+
+[node name="Sprite2D" parent="." index="0" unique_id=1393448604]
+texture = ExtResource("3_qlvmv")
+
+[node name="Hitbox" parent="." index="1" unique_id=857033006]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_d3t4b")
