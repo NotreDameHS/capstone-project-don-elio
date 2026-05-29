@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dqk3u2gbekgig" path="res://Player/Weapons/Projectiles/projectile.tscn" id="1_jwup7"]
 [ext_resource type="Texture2D" uid="uid://cu3wyc1j50jw1" path="res://assets/redslash.png" id="2_cby87"]
+[ext_resource type="Script" uid="uid://ch0plw78dtoiu" path="res://Player/Weapons/Projectiles/axe_projectile.gd" id="2_kqqx8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x6xev"]
 radius = 208.0
@@ -9,6 +10,7 @@ height = 1052.0
 
 [node name="Axe Projectile" unique_id=142943135 instance=ExtResource("1_jwup7")]
 scale = Vector2(0.5, 0.5)
+script = ExtResource("2_kqqx8")
 lifespan = 0.1
 projectile_speed = 0
 damage = 100

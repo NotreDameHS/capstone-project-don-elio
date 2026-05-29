@@ -42,13 +42,28 @@ func axe_upgrade():
 	if GameManager.axe_level == 0:
 		var add_axe = GameManager.axe.instantiate()
 		add_child(add_axe)
+	elif GameManager.axe_level == 1:
+		GameManager.axe_proj.instantiate()
+		GameManager.axe_size *= 1.3
+	
+	
+	
+	
+	
+	
+	GameManager.axe_level += 1
 		
 func bomb_upgrade():
 	if GameManager.bomb_level == 0:
 		var add_bomb = GameManager.bomb.instantiate()
 		add_child(add_bomb)
 			
+	GameManager.bomb_level += 1
+	
 func ball_upgrade():
 	if GameManager.ball_level == 0:
 		var add_ball = GameManager.fun_ball.instantiate()
 		add_child(add_ball)
+		
+	
+	GameManager.ball_level += 1
