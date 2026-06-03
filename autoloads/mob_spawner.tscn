@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c4cyg72adh4uk" path="res://autoloads/mob_spawner.gd" id="1_vg0l3"]
 [ext_resource type="PackedScene" uid="uid://pnr34cqadsqd" path="res://Mobs/basic_mob.tscn" id="2_o2jl3"]
+[ext_resource type="PackedScene" uid="uid://dkdfb7lh3vnjk" path="res://Mobs/fast_mob.tscn" id="3_qphj7"]
+[ext_resource type="PackedScene" uid="uid://cx3ijtijhv50e" path="res://Mobs/slow_boss.tscn" id="4_u5hy1"]
 
 [sub_resource type="GDScript" id="GDScript_o2jl3"]
 script/source = "extends Node2D
@@ -35,7 +37,9 @@ position = Vector2(0.36097336, 0)
 scale = Vector2(1.0097561, 1)
 curve = SubResource("Curve2D_03qkr")
 script = ExtResource("1_vg0l3")
-mob_scene = ExtResource("2_o2jl3")
+basic_mob_scene = ExtResource("2_o2jl3")
+fast_mob_scene = ExtResource("3_qphj7")
+big_mob_scene = ExtResource("4_u5hy1")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=922325030]
 position = Vector2(1177.1545, -45)

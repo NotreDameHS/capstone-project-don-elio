@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cx3ijtijhv50e"]
+
+[ext_resource type="PackedScene" uid="uid://b4ysbstrrmuiq" path="res://Mobs/mob.tscn" id="1_hgfwf"]
+[ext_resource type="Texture2D" uid="uid://ifsdv4imubmw" path="res://assets/laserYellow2.png" id="2_g2a2u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hq7m7"]
+radius = 62.0
+height = 242.0
+
+[node name="Slow Boss" unique_id=1979868123 instance=ExtResource("1_hgfwf")]
+speed = 70
+health = 400
+max_health = 400
+damage = 30
+exp_dropped = 3
+
+[node name="Sprite2D" parent="." index="0" unique_id=1393448604]
+scale = Vector2(2.3676472, 2.367647)
+texture = ExtResource("2_g2a2u")
+
+[node name="Hitbox" parent="." index="1" unique_id=857033006]
+shape = SubResource("CapsuleShape2D_hq7m7")
