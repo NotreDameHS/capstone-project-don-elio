@@ -9,7 +9,7 @@ size = Vector2(34, 100)
 [node name="Fast mob" unique_id=1979868123 instance=ExtResource("1_q31ue")]
 speed = 300
 health = 70
-max_health = 700
+max_health = 70
 damage = 15
 exp_dropped = 2
 
