@@ -2,12 +2,19 @@ extends CanvasLayer
 class_name Ui
 
 @export var stopwatch_label : Label
+@export var player: Player
+@onready var exp_bar = $"Experience Bar"
 
 
 var total_time_in_secs : int = 0
 
 func _ready() -> void:
 	$Timer.start()
+	exp_bar.value = 0
+	exp_bar.max_value = 100
+	
+	if player:
+		player.experience_gained.connect(_on_experience_gained)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,7 +22,10 @@ func _process(delta: float) -> void:
 	pass
 
 
-#hello world
+func _on_experience_gained(current, max_hp):
+	exp_bar.value = current
+	exp_bar.max_value = GameManager.exp
+
 
 func _on_button_pressed() -> void:
 	get_tree().quit()
