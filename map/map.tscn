@@ -20,7 +20,7 @@ transform = Transform2D(1, 0, 0, 1, -10, 0)
 
 [node name="Player" parent="." unique_id=2093391887 instance=ExtResource("2_lgq1i")]
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1641254171]
+[node name="Camera" type="Camera2D" parent="Player" unique_id=1641254171]
 zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 
