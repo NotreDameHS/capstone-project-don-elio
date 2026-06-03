@@ -15,13 +15,11 @@ func _ready() -> void:
 	print(mobs_list)
 
 func _on_timer_timeout():
+	var mobs_list : Array = [basic_mob_scene, basic_mob_scene, basic_mob_scene, basic_mob_scene, fast_mob_scene, big_mob_scene]
 	spawn_follow.progress_ratio = rng.randf()
 	
 	# Instance and position the mob
-	print(mobs_list)
-	var mob = mobs_list.pick_random()
-	print(mob)
-	#mob.instantiate()
-	#mob.global_position = spawn_follow.global_position
-	#get_parent().add_child(mob)
-	#mob.reparent(get_tree().current_scene)
+	var mob = mobs_list.pick_random().instantiate()
+	mob.global_position = spawn_follow.global_position
+	get_parent().add_child(mob)
+	mob.reparent(get_tree().current_scene)

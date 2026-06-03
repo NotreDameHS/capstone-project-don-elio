@@ -13,8 +13,8 @@ const collectable = preload("res://entities/collectibles/collectable.tscn")
 @export var loot_scene : PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	hitbox.shape = hitbox.shape.duplicate()		# Duplicate it so it's unique to this mob
-	hitbox.shape.radius = hitbox_size
+	#hitbox.shape = hitbox.shape.duplicate()		# Duplicate it so it's unique to this mob
+	#hitbox.shape.radius = hitbox_size
 	health = max_health
 
 
