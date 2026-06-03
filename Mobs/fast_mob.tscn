@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dkdfb7lh3vnjk"]
+
+[ext_resource type="PackedScene" uid="uid://b4ysbstrrmuiq" path="res://Mobs/mob.tscn" id="1_q31ue"]
+[ext_resource type="Texture2D" uid="uid://cl0uordbwrljp" path="res://assets/laserYellow1.png" id="2_h46we"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2d66"]
+size = Vector2(34, 100)
+
+[node name="Fast mob" unique_id=1979868123 instance=ExtResource("1_q31ue")]
+speed = 300
+health = 70
+max_health = 700
+damage = 15
+exp_dropped = 2
+
+[node name="Sprite2D" parent="." index="0" unique_id=1393448604]
+texture = ExtResource("2_h46we")
+
+[node name="Hitbox" parent="." index="1" unique_id=857033006]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_l2d66")
