@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://72lmmuth4gkn"]
+
+[ext_resource type="PackedScene" uid="uid://lhcoce0pudu8" path="res://Player/Ui/Ui.tscn" id="1_kffv2"]
+[ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_lgq1i"]
+[ext_resource type="PackedScene" uid="uid://bj5renq4nvp" path="res://Player/Weapons/gun.tscn" id="4_kffv2"]
+[ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="4_lgq1i"]
+[ext_resource type="PackedScene" uid="uid://co48w0mi0avur" path="res://Player/Weapons/axe.tscn" id="5_kffv2"]
+[ext_resource type="PackedScene" uid="uid://cn0dua1isisqv" path="res://Player/Weapons/bomb.tscn" id="6_7lyie"]
+
+[node name="Main Game" type="Node2D" unique_id=658749253]
+
+[node name="Player" parent="." unique_id=2093391887 instance=ExtResource("2_lgq1i")]
+
+[node name="Ui" parent="Player" unique_id=705736641 instance=ExtResource("1_kffv2")]
+
+[node name="Mob Spawner" parent="Player" unique_id=1092428988 instance=ExtResource("4_lgq1i")]
+position = Vector2(-2258, -16)
+scale = Vector2(2, 2)
+
+[node name="Gun" parent="Player" unique_id=1605596866 instance=ExtResource("4_kffv2")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2139003799]
+scale = Vector2(0.8, 0.8)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+
+[node name="Axe" parent="Player" unique_id=2045584916 instance=ExtResource("5_kffv2")]
+
+[node name="Bomb" parent="Player" unique_id=1132751412 instance=ExtResource("6_7lyie")]
