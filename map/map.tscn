@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://72lmmuth4gkn"]
+[gd_scene format=3 uid="uid://d16ten02i4k65"]
 
 [ext_resource type="PackedScene" uid="uid://lhcoce0pudu8" path="res://Player/Ui/Ui.tscn" id="1_kffv2"]
 [ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_lgq1i"]
@@ -6,8 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="4_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://co48w0mi0avur" path="res://Player/Weapons/axe.tscn" id="5_kffv2"]
 [ext_resource type="PackedScene" uid="uid://cn0dua1isisqv" path="res://Player/Weapons/bomb.tscn" id="6_7lyie"]
+[ext_resource type="PackedScene" uid="uid://cc4dvp6fkavra" path="res://map/tile_map_layer.tscn" id="7_5jdw0"]
 
 [node name="Main Game" type="Node2D" unique_id=658749253]
+
+[node name="TileMapLayer" parent="." unique_id=564554986 instance=ExtResource("7_5jdw0")]
+z_index = -2
+position = Vector2(-1234, -846.99994)
+scale = Vector2(100000000000, 100000000000)
 
 [node name="Player" parent="." unique_id=2093391887 instance=ExtResource("2_lgq1i")]
 
@@ -23,7 +29,7 @@ scale = Vector2(2, 2)
 scale = Vector2(0.8, 0.8)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
-position_smoothing_speed = 1.0
+position_smoothing_speed = 3.0
 
 [node name="Axe" parent="Player" unique_id=2045584916 instance=ExtResource("5_kffv2")]
 
