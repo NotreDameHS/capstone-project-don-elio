@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://cvanyl57gpfuj" path="res://Player/Ui/ui.gd" id="1_je7wo"]
 [ext_resource type="Script" uid="uid://bpnoxegqjx14o" path="res://Player/Ui/experience_bar.gd" id="2_tcwcp"]
-[ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="3_42iaa"]
 
 [sub_resource type="Theme" id="Theme_74chg"]
 
@@ -15,7 +14,7 @@ bg_color = Color(0.51238215, 0.11684609, 0.5126926, 1)
 [node name="Ui" type="CanvasLayer" unique_id=705736641 node_paths=PackedStringArray("stopwatch_label", "player")]
 script = ExtResource("1_je7wo")
 stopwatch_label = NodePath("StopWatch Label")
-player = NodePath("Player")
+player = NodePath("")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=321688623]
 offset_left = 5.0
@@ -80,8 +79,6 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Quit"
-
-[node name="Player" parent="." unique_id=2093391887 instance=ExtResource("3_42iaa")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_button_pressed"]
