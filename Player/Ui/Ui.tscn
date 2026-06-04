@@ -11,10 +11,9 @@ bg_color = Color(0.88235295, 0.38039216, 0.72156864, 0.77254903)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcwcp"]
 bg_color = Color(0.51238215, 0.11684609, 0.5126926, 1)
 
-[node name="Ui" type="CanvasLayer" unique_id=705736641 node_paths=PackedStringArray("stopwatch_label", "player")]
+[node name="Ui" type="CanvasLayer" unique_id=705736641 node_paths=PackedStringArray("stopwatch_label")]
 script = ExtResource("1_je7wo")
 stopwatch_label = NodePath("StopWatch Label")
-player = NodePath("")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=321688623]
 offset_left = 5.0
@@ -29,10 +28,9 @@ layout_mode = 2
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -23.0
-offset_top = 2.0
-offset_right = 50.0
-offset_bottom = 25.0
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 69.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "00:00"
