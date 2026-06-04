@@ -26,19 +26,33 @@ var axe_level := 1
 var bomb_level := 0
 var ball_level := 0
 var total_time_in_secs : int = 0
-
+var player_scene = null
 
 func _ready() -> void:
 	health = max_health
-	var player = player.instantiate()
-	#player.axe_upgrade()
+	static var player_scene = player.instantiate()
+	get_tree().current_scene.add_child(player_scene)
+	upgrade(player_scene)
+	
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
+func upgrade(player_scene):
+	print(weapon_options)
+	if level == 0:
+		var start_weapon = weapon_options.pick_random()
+		if start_weapon == "axe":
+			var axe_scene = axe.instantiate()
+			player_scene.add_child(axe_scene)
+		elif start_weapon == "bomb":
+			var bomb_scene = bomb.instantiate()
+			player_scene.add_child(bomb_scene)
+		elif start_weapon == "fun_ball":
+			var fun_ball_scene = fun_ball.instantiate()
+			player_scene.add_child(fun_ball_scene)
 
 func _level_up():
 	level += 1
