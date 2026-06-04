@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d16ten02i4k65"]
 
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://lhcoce0pudu8" path="res://Player/Ui/Ui.tscn" id="1_kffv2"]
 [ext_resource type="PackedScene" uid="uid://rn5xs2eqd666" path="res://Player/player.tscn" id="2_lgq1i"]
 [ext_resource type="PackedScene" uid="uid://bj5renq4nvp" path="res://Player/Weapons/gun.tscn" id="4_kffv2"]
@@ -34,3 +35,6 @@ position_smoothing_speed = 3.0
 [node name="Axe" parent="Player" unique_id=2045584916 instance=ExtResource("5_kffv2")]
 
 [node name="Bomb" parent="Player" unique_id=1132751412 instance=ExtResource("6_7lyie")]
+=======
+[node name="Main Game" type="Node2D" unique_id=658749253]
+>>>>>>> Stashed changes

@@ -39,28 +39,16 @@ func take_damage(amount):
 
 
 
-
+func axe_upgrade():
+	if GameManager.axe_level == 0:
+		pass
 
 
 func die():
-	pass #FINISH LATER
+	queue_free()
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Collectable:
 		GameManager._gain_exp()
 	if area is Mob:
 		take_damage(area.damage)
-
-func gain_xp(amount):
-	experience += amount
-	if experience_level >= experience_required:
-		experience -= experience_required
-		level_up()
-	
-	leveled_up.emit()
-	
-func level_up():
-	experience_level += 1
-	experience_required = 50
-	
-	print("Leveled Up, New Level: ", experience_level)
