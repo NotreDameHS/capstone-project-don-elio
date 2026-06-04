@@ -33,8 +33,8 @@ point_count = 5
 script = SubResource("GDScript_o2jl3")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1657624244]
-position = Vector2(0.36097336, 0)
-scale = Vector2(1.0097561, 1)
+position = Vector2(32.296936, -585.53424)
+scale = Vector2(1.8728901, 1.8547945)
 curve = SubResource("Curve2D_03qkr")
 script = ExtResource("1_vg0l3")
 basic_mob_scene = ExtResource("2_o2jl3")

@@ -1,5 +1,4 @@
 extends Node
-<<<<<<< Updated upstream
 @onready var player := preload("res://Player/player.tscn")
 @onready var axe := preload("res://Player/Weapons/axe.tscn")
 @onready var bomb := preload("res://Player/Weapons/bomb.tscn")
@@ -26,9 +25,7 @@ var weapon_options : Array = ["axe", "bomb", "fun_ball"]
 var axe_level := 1
 var bomb_level := 0
 var ball_level := 0
-=======
 var total_time_in_secs : int = 0
->>>>>>> Stashed changes
 
 
 func _ready() -> void:
@@ -42,7 +39,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-<<<<<<< Updated upstream
 
 func _level_up():
 	level += 1
@@ -57,11 +53,9 @@ func _gain_exp():
 		exp -= exp_to_level_up
 		_level_up()
 	
-=======
 func _on_timer_timeout() -> void:
 	total_time_in_secs += 1
 	var m = int(total_time_in_secs / 60.0)
 	var s = total_time_in_secs - m * 60
 	$"StopWatch Label".text = '%02d:%02d' % [m, s] 
 	pass # Replace with function body.
->>>>>>> Stashed changes
