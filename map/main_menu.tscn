@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://bkuv6bykdkkpy"]
+
+[ext_resource type="Script" uid="uid://dnl6emler5cut" path="res://map/main_menu.gd" id="1_gwo67"]
+[ext_resource type="Texture2D" uid="uid://bjrks0x0k35iw" path="res://map/blue.png" id="1_vbcf1"]
+[ext_resource type="FontFile" uid="uid://ct0u1pln3j2rk" path="res://map/Alien.ttf" id="2_6eyor"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6eyor"]
+texture = ExtResource("1_vbcf1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tydc"]
+bg_color = Color(0.6, 0.68235296, 0.6, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[node name="MainMenu" type="Control" unique_id=369396462]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gwo67")
+
+[node name="Panel" type="Panel" parent="." unique_id=1286338860]
+modulate = Color(0.98039216, 0.98039216, 0.98039216, 0.63529414)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -574.5
+offset_top = -326.5
+offset_right = 574.5
+offset_bottom = 326.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6eyor")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=56283067]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.0
+offset_top = -72.0
+offset_right = 215.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=2137181988]
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+theme_override_styles/normal = SubResource("StyleBoxFlat_4tydc")
+text = "Start Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1040902827]
+layout_mode = 2
+theme_override_font_sizes/font_size = 51
+theme_override_styles/normal = SubResource("StyleBoxFlat_4tydc")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="." unique_id=576633541]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = -146.0
+offset_right = 266.0
+offset_bottom = -92.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_6eyor")
+theme_override_font_sizes/font_size = 39
+text = "Alien   Survivors"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]
