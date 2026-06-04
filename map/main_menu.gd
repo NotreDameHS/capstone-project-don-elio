@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://map/map.tscn")
 	print("Start")
-	pass # Replace with function body.
+	GameManager.game_start()
 
 
 func _on_exit_pressed() -> void:
