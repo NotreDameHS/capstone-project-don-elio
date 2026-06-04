@@ -30,11 +30,11 @@ var player_scene = null
 
 func _ready() -> void:
 	health = max_health
+	
+func game_start():
 	var player_scene = player.instantiate()
 	get_tree().current_scene.add_child(player_scene)
 	upgrade(player_scene)
-	
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
