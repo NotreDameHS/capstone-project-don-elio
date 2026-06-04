@@ -1,3 +1,29 @@
 [gd_scene format=3 uid="uid://rn5xs2eqd666"]
 
-[node name="Main Game" type="Node2D" unique_id=658749253]
+[ext_resource type="Script" uid="uid://d1ckm5tcn4quc" path="res://Player/player.gd" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://assets/shipBeige_manned.png" id="2_4ntmi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l8h54"]
+radius = 64.195015
+
+[node name="Player" type="Area2D" unique_id=1758849162]
+script = ExtResource("1_l8h54")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1505716522]
+shape = SubResource("CircleShape2D_l8h54")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1611816789]
+texture = ExtResource("2_4ntmi")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1611992883]
+
+[node name="UI" type="Control" parent="." unique_id=2022787972]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="ProgressBar" parent="UI" unique_id=1804472970]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0

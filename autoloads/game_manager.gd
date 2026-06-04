@@ -30,7 +30,7 @@ var player_scene = null
 
 func _ready() -> void:
 	health = max_health
-	static var player_scene = player.instantiate()
+	var player_scene = player.instantiate()
 	get_tree().current_scene.add_child(player_scene)
 	upgrade(player_scene)
 	

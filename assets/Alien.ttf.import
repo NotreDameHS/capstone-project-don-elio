@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ct0u1pln3j2rk"
-path="res://.godot/imported/Alien.ttf-2def95829be532b380c6ddc907c8da14.fontdata"
+path="res://.godot/imported/Alien.ttf-bfae0bf674d2228300399f9d9b1a70d7.fontdata"
 
 [deps]
 
-source_file="res://map/Alien.ttf"
-dest_files=["res://.godot/imported/Alien.ttf-2def95829be532b380c6ddc907c8da14.fontdata"]
+source_file="res://assets/Alien.ttf"
+dest_files=["res://.godot/imported/Alien.ttf-bfae0bf674d2228300399f9d9b1a70d7.fontdata"]
 
 [params]
 
