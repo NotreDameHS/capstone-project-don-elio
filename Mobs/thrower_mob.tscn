@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dwn35tvooxn34"]
+
+[ext_resource type="PackedScene" uid="uid://b4ysbstrrmuiq" path="res://Mobs/mob.tscn" id="1_ffnqp"]
+[ext_resource type="Texture2D" uid="uid://d4m7vslyy0cfq" path="res://assets/vector_spaceships.svg" id="2_jsx0k"]
+
+[node name="Thrower Mob" unique_id=1979868123 instance=ExtResource("1_ffnqp")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1393448604]
+position = Vector2(-24, -6)
+scale = Vector2(0.21181822, 0.14000005)
+texture = ExtResource("2_jsx0k")
+
+[node name="Hitbox" parent="." index="1" unique_id=857033006]
+position = Vector2(0, 5)
