@@ -3,6 +3,8 @@ extends Node
 @onready var axe := preload("res://Player/Weapons/axe.tscn")
 @onready var bomb := preload("res://Player/Weapons/bomb.tscn")
 @onready var fun_ball := preload("res://Player/Weapons/gun.tscn")
+@onready var game_root := preload("res://game_root.tscn")
+@onready var mob_spawner := preload("res://autoloads/mob_spawner.tscn")
 
 @onready var axe_proj := preload("res://Player/Weapons/Projectiles/axe_projectile.tscn")
 @onready var bomb_proj := preload("res://Player/Weapons/Projectiles/bomb_projectile.tscn")
@@ -31,13 +33,18 @@ var player_scene = null
 func _ready() -> void:
 	health = max_health
 	var player_scene = player.instantiate()
-	game_start()
+	var game_root := game_root.instantiate()
 	
 func game_start():
 	var player_scene = player.instantiate()
+	var game_root := game_root.instantiate()
+	print(player_scene)
 	get_tree().current_scene.add_child(player_scene)
 	upgrade(player_scene)
-
+	game_root.removeUi()
+	
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

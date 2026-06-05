@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://d1ckm5tcn4quc" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://assets/shipBeige_manned.png" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="3_btcbx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l8h54"]
 radius = 64.195015
 
-[node name="Player" type="Area2D" unique_id=1758849162]
+[node name="Player" type="Area2D" unique_id=1758849162 groups=["Player"]]
 script = ExtResource("1_l8h54")
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1505716522]
@@ -31,3 +32,6 @@ offset_right = 125.0
 offset_bottom = -82.0
 value = 50.0
 show_percentage = false
+
+[node name="Mob Spawner" parent="." unique_id=1092428988 instance=ExtResource("3_btcbx")]
+position = Vector2(-1098, 23)

@@ -19,7 +19,8 @@ func _ready() -> void:
 	hitbox.shape.radius = hitbox_size
 	health_bar.max_value = GameManager.max_health
 	health_bar.value = GameManager.health
-
+	#var mob_spawner = GameManager.mob_spawner.instantiate()
+	#add_child(mob_spawner)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	var direction := Vector2(0,0)

@@ -7,7 +7,7 @@
 script = ExtResource("1_xj5yv")
 
 [node name="MainMenu" parent="." unique_id=369396462 instance=ExtResource("2_pjpa4")]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 572.0
+offset_top = 334.0
+offset_right = 612.0
+offset_bottom = 334.0
