@@ -1,4 +1,7 @@
 extends Mob
+@export var projectile_scene: PackedScene = preload("res://Player/Weapons/Projectiles/projectile.tscn")
+@onready var muzzle: Marker2D = $Muzzle
+@onready var shoo_timer: Timer = $ShootTimer
 
 
 # Called when the node enters the scene tree for the first time.

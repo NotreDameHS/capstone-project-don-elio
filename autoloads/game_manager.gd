@@ -30,8 +30,6 @@ var player_scene = null
 
 func _ready() -> void:
 	health = max_health
-	var player_scene = player.instantiate()
-	game_start()
 	
 func game_start():
 	var player_scene = player.instantiate()
