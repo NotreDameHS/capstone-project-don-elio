@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dcmnlbe1i62ke"]
+
+[ext_resource type="Script" uid="uid://s0077bb1e5is" path="res://game_root.gd" id="1_xj5yv"]
+[ext_resource type="PackedScene" uid="uid://bkuv6bykdkkpy" path="res://map/main_menu.tscn" id="2_pjpa4"]
+
+[node name="GameRoot" type="Node2D" unique_id=1915767356]
+script = ExtResource("1_xj5yv")
+
+[node name="MainMenu" parent="." unique_id=369396462 instance=ExtResource("2_pjpa4")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 40.0
+offset_bottom = 40.0
