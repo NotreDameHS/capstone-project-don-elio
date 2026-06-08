@@ -21,7 +21,7 @@ var max_speed := 300
 var health := 100
 var max_health := 100
 
-var upgrade_options : Array = ["axe", "bomb", "fun_ball", "proj_num", "attack_speed", "health", "player_speed"]
+var upgrade_options : Array = ["axe", "bomb", "fun_ball", "proj_num", "attack_speed", "health", "player_speed", "damage"]
 var weapon_options : Array = ["axe", "bomb", "fun_ball"]
 
 var axe_level := 1
@@ -33,11 +33,17 @@ var player_scene = null
 func _ready() -> void:
 	health = max_health
 	var player_scene = player.instantiate()
-	var game_root := game_root.instantiate()
+	#var game_root := game_root.instantiate()
 	
 func game_start():
 	var player_scene = player.instantiate()
-	var game_root := game_root.instantiate()
+	# This grabs the 1st child of game root (your main menu)
+	#var game_root := get_tree().current_scene.get_child(0)
+	
+	# This grabs the main game root node
+	var game_root := get_tree().current_scene
+	print(game_root)
+	print("####")
 	print(player_scene)
 	get_tree().current_scene.add_child(player_scene)
 	upgrade(player_scene)

@@ -1,5 +1,4 @@
 extends Node2D
-@onready var main_menu := $MainMenu
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,7 +11,10 @@ func _process(delta: float) -> void:
 
 
 func removeUi():
-	var main_menu := $MainMenu
-	remove_child(main_menu)
+	var main_menu := get_child(0)
+	#main_menu.visible = false
+	#print(main_menu.visible)
+	#main_menu.process_mode = Node.PROCESS_MODE_DISABLED
+	print("E")
 	main_menu.queue_free()
 	
