@@ -57,7 +57,8 @@ func _process(delta: float) -> void:
 
 func upgrade(player_scene):
 	print(weapon_options)
-	if level == 0:
+	level += 1
+	if level == 1:
 		var start_weapon = weapon_options.pick_random()
 		if start_weapon == "axe":
 			var axe_scene = axe.instantiate()
@@ -77,11 +78,11 @@ func upgrade(player_scene):
 		elif upgrade_choice == "fun_ball":
 			ball_level += 1
 		elif upgrade_choice == "proj_num":
-			var weapons := get_nodes_in_group("Weapon")
+			var weapons := get_tree().get_nodes_in_group("Weapon")
 			for attack in weapons:
 				attack.projectiles_num += 1
 		elif upgrade_choice == "attack_speed":
-			var weapons := get_nodes_in_group("Weapon")
+			var weapons := get_tree().get_nodes_in_group("Weapon")
 			for attack in weapons:
 				attack.attack_speed *= 1.3
 				attack.attacktimer.wait_time = 1.0 / attack.attack_speed
@@ -90,7 +91,7 @@ func upgrade(player_scene):
 		elif upgrade_choice == "player_speed":
 			player.max_speed += 50
 		elif upgrade_choice == "damage":
-			var weapons := get_nodes_in_group("Weapon")
+			var weapons := get_tree().get_nodes_in_group("Weapon")
 			for attack in weapons:
 				attack.damage += 30
 
