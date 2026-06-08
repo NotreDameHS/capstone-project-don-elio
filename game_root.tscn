@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://br2744pg4nhvj"]
 
-[ext_resource type="Script" path="res://game_root.gd" id="1_xj5yv"]
+[ext_resource type="Script" uid="uid://s0077bb1e5is" path="res://game_root.gd" id="1_xj5yv"]
 [ext_resource type="PackedScene" uid="uid://bkuv6bykdkkpy" path="res://map/main_menu.tscn" id="2_pjpa4"]
 
 [node name="GameRoot" type="Node2D" unique_id=1915767356]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Alien Survivor REal"
-run/main_scene="uid://dcmnlbe1i62ke"
+run/main_scene="uid://br2744pg4nhvj"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
