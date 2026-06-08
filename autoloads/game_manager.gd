@@ -68,6 +68,31 @@ func upgrade(player_scene):
 		elif start_weapon == "fun_ball":
 			var fun_ball_scene = fun_ball.instantiate()
 			player_scene.add_child(fun_ball_scene)
+	else:
+		var upgrade_choice = upgrade_options.pick_random()
+		if upgrade_choice == "axe":
+			axe_level += 1
+		elif upgrade_choice == "bomb":
+			bomb_level += 1
+		elif upgrade_choice == "fun_ball":
+			ball_level += 1
+		elif upgrade_choice == "proj_num":
+			var weapons := get_nodes_in_group("Weapon")
+			for attack in weapons:
+				attack.projectiles_num += 1
+		elif upgrade_choice == "attack_speed":
+			var weapons := get_nodes_in_group("Weapon")
+			for attack in weapons:
+				attack.attack_speed *= 1.3
+				attack.attacktimer.wait_time = 1.0 / attack.attack_speed
+		elif upgrade_choice == "health":
+			max_health += 50
+		elif upgrade_choice == "player_speed":
+			player.max_speed += 50
+		elif upgrade_choice == "damage":
+			var weapons := get_nodes_in_group("Weapon")
+			for attack in weapons:
+				attack.damage += 30
 
 func _level_up():
 	level += 1
