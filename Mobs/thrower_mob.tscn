@@ -14,7 +14,9 @@ texture = ExtResource("2_jsx0k")
 position = Vector2(0, 5)
 
 [node name="Muzzle" type="Marker2D" parent="." index="2" unique_id=1829772605]
-position = Vector2(57, 0)
+position = Vector2(58, 0)
 
 [node name="ShootTimer" type="Timer" parent="." index="3" unique_id=617393827]
 autostart = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

@@ -40,3 +40,8 @@ func die():
 		exp.reparent(get_tree().current_scene)
 	queue_free()
 	
+
+
+func _on_shoot_timer_timeout() -> void:
+	
+	pass # Replace with function body.
