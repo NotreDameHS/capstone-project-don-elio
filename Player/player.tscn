@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://assets/shipBeige_manned.png" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="3_btcbx"]
 [ext_resource type="PackedScene" uid="uid://lhcoce0pudu8" path="res://Player/Ui/Ui.tscn" id="3_gwnis"]
-[ext_resource type="Script" uid="uid://c3o5k3yyevdr8" path="res://Player/health_bar.gd" id="3_k53q1"]
+[ext_resource type="Script" path="res://Player/health_bar.gd" id="3_k53q1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l8h54"]
 radius = 64.195015
