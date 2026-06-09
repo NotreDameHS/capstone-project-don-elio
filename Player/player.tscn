@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://assets/shipBeige_manned.png" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="3_btcbx"]
 [ext_resource type="PackedScene" uid="uid://lhcoce0pudu8" path="res://Player/Ui/Ui.tscn" id="3_gwnis"]
-[ext_resource type="PackedScene" uid="uid://cc4dvp6fkavra" path="res://map/tile_map_layer.tscn" id="6_fhl08"]
+[ext_resource type="PackedScene" path="res://map/tile_map_layer.tscn" id="6_fhl08"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l8h54"]
 radius = 64.195015
@@ -75,7 +75,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_vtle1")
 value = 50.0
 show_percentage = false
 script = SubResource("GDScript_k53q1")
-player = null
 
 [node name="Mob Spawner" parent="." unique_id=1092428988 instance=ExtResource("3_btcbx")]
 position = Vector2(-1098, 23)

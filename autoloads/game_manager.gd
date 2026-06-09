@@ -28,15 +28,15 @@ var axe_level := 1
 var bomb_level := 0
 var ball_level := 0
 var total_time_in_secs : int = 0
-var player_scene = null
+@onready var player_scene = player.instantiate()
 
 func _ready() -> void:
 	health = max_health
-	var player_scene = player.instantiate()
+	#var player_scene = player.instantiate()
 	#var game_root := game_root.instantiate()
 	
 func game_start():
-	var player_scene = player.instantiate()
+	#var player_scene = player.instantiate()
 	# This grabs the 1st child of game root (your main menu)
 	#var game_root := get_tree().current_scene.get_child(0)
 	
@@ -46,7 +46,7 @@ func game_start():
 	print("####")
 	print(player_scene)
 	get_tree().current_scene.add_child(player_scene)
-	upgrade(player_scene)
+	upgrade()
 	game_root.removeUi()
 	
 	
@@ -55,7 +55,7 @@ func game_start():
 func _process(delta: float) -> void:
 	pass
 
-func upgrade(player_scene):
+func upgrade():
 	print(weapon_options)
 	level += 1
 	if level == 1:
@@ -89,7 +89,7 @@ func upgrade(player_scene):
 		elif upgrade_choice == "health":
 			max_health += 50
 		elif upgrade_choice == "player_speed":
-			player.max_speed += 50
+			player_scene.max_speed += 50
 		elif upgrade_choice == "damage":
 			var weapons := get_tree().get_nodes_in_group("Weapon")
 			for attack in weapons:
@@ -99,7 +99,7 @@ func _level_up():
 	level += 1
 	health = max_health
 	exp_to_level_up *= 1.3
-	#Add Everything to level up later
+	upgrade()
 	
 
 func _gain_exp():
