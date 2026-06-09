@@ -15,7 +15,7 @@ var bomb_size := 1.0
 var fun_ball_size := 1.0
 
 var level := 0
-var exp := 0
+var exp := 10
 var exp_to_level_up := 100
 var max_speed := 300
 var health := 100
