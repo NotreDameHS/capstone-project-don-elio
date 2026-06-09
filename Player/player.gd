@@ -36,7 +36,7 @@ func take_damage(amount):
 	health_bar.value -= amount
 	if GameManager.health <= 0:
 		die()
-
+	print("#")
 
 
 
@@ -53,3 +53,4 @@ func _on_area_entered(area: Area2D) -> void:
 		GameManager._gain_exp()
 	if area is Mob:
 		take_damage(area.damage)
+	print("##")

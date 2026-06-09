@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jdhi7g03g631" path="res://assets/shipBeige_manned.png" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://y26c3ej2hojq" path="res://autoloads/mob_spawner.tscn" id="3_btcbx"]
 [ext_resource type="PackedScene" uid="uid://lhcoce0pudu8" path="res://Player/Ui/Ui.tscn" id="3_gwnis"]
-[ext_resource type="Script" path="res://Player/health_bar.gd" id="3_k53q1"]
+[ext_resource type="PackedScene" uid="uid://cc4dvp6fkavra" path="res://map/tile_map_layer.tscn" id="6_fhl08"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l8h54"]
 radius = 64.195015
@@ -23,8 +23,32 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="GDScript" id="GDScript_k53q1"]
+script/source = "extends ProgressBar
+@export var max_health = 100
+var health = 10
+@export var player := PackedScene
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	set_health(50)
+	pass # Replace with function body.
+
+func set_health(new_health : int) -> void:
+	health = new_health
+	value = health
+	pass
+	
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="Player" type="Area2D" unique_id=1758849162 groups=["Player"]]
+collision_mask = 10
 script = ExtResource("1_l8h54")
+
+[node name="Ui" parent="." unique_id=705736641 instance=ExtResource("3_gwnis")]
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1505716522]
 shape = SubResource("CircleShape2D_l8h54")
@@ -50,10 +74,15 @@ theme_override_styles/background = SubResource("StyleBoxFlat_fhl08")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vtle1")
 value = 50.0
 show_percentage = false
-script = ExtResource("3_k53q1")
-max_health = null
-
-[node name="Ui" parent="UI/HealthBar" unique_id=705736641 instance=ExtResource("3_gwnis")]
+script = SubResource("GDScript_k53q1")
+player = null
 
 [node name="Mob Spawner" parent="." unique_id=1092428988 instance=ExtResource("3_btcbx")]
 position = Vector2(-1098, 23)
+
+[node name="TileMapLayer" parent="." unique_id=564554986 instance=ExtResource("6_fhl08")]
+z_index = -1
+position = Vector2(-1093, -666)
+scale = Vector2(2, 2)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
