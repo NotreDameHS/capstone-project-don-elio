@@ -1,6 +1,6 @@
 extends ProgressBar
 @export var max_health = 100
-var current_health = int
+#var current_health = int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
